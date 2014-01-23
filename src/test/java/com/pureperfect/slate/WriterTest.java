@@ -76,8 +76,6 @@ public class WriterTest
 
 		Assert.assertEquals("\" Hello World \"", writer.format(" Hello World ")
 				.toString());
-		
-		System.out.println(writer.format("\"gaze\n"));
 	}
 
 	@Test
@@ -126,9 +124,7 @@ public class WriterTest
 		person2.setFirstName("Mom");
 		person2.setLastName("Your");
 
-		writer.writeMapped(out, person);
-		writer.nextLine(out);
-		writer.writeMapped(out, person2);
+		writer.writeMapped(out, person, person2);
 
 		out.flush();
 		out.close();

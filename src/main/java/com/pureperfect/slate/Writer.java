@@ -177,7 +177,7 @@ public class Writer
 
 	/**
 	 * Writes out objects that are mapped using the {@link Column} annotation in
-	 * their sorted column order.
+	 * their sorted column order. Each object will be written to a new line.
 	 * 
 	 * @param out
 	 *            The print stream to write to.
@@ -213,6 +213,8 @@ public class Writer
 				if (current++ < delimStop)
 					this.delimiter(out);
 			}
+
+			this.nextLine(out);
 		}
 	}
 }
