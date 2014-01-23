@@ -19,7 +19,7 @@ public class Writer
 {
 	private final CharSequence delimiter;
 
-	private CharSequence nextLine = "\r\n";
+	private final CharSequence nextLine;
 
 	private final boolean alwaysUseDoubleQuotes;
 
